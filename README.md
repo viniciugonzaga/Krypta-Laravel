@@ -1,74 +1,104 @@
-# 🔐 Krypta - Segurança de Credenciais e Identidade Digital
+<div align="center">
 
-![Status](https://img.shields.io/badge/Status-Conclu%C3%ADdo-brightgreen)
-![Laravel](https://img.shields.io/badge/Laravel-11.x-red)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.x-blue)
+  <!-- Substitua o caminho abaixo caso tenha uma logo oficial do Krypta no seu projeto -->
+  <img src="public/favicon.ico" width="150" alt="Logo Krypta">
 
-Este projeto é o Trabalho de Conclusão de Curso (TCC) para o curso Técnico de Desenvolvimento de Sistemas. O **Krypta** é uma plataforma web (Frontend e Backend) focada na divulgação e gerenciamento de um sistema de segurança digital e cofre físico de senhas. O design foi totalmente baseado no protótipo fornecido, utilizando uma interface escura (Dark Mode) com detalhes em roxo neon, proporcionando uma experiência moderna e imersiva.
+  <h1>🔐 Krypta</h1>
 
-## 🚀 Tecnologias Utilizadas
-* **Framework:** Laravel 11
-* **Autenticação:** Laravel Breeze (Blade + Alpine.js)
-* **Estilização:** Tailwind CSS
-* **Banco de Dados:** MySQL (via XAMPP)
-* **Gerenciadores de Pacotes:** Composer e Node.js (NPM)
+  <p><strong>Plataforma web completa de segurança digital, gerenciamento de credenciais e divulgação de cofres físicos.</strong></p>
 
-## ⚙️ Pré-requisitos
-Antes de começar, você vai precisar ter instalado em sua máquina:
-* [XAMPP](https://www.apachefriends.org/pt_br/index.html) (com Apache e MySQL rodando)
-* [Composer](https://getcomposer.org/)
-* [Node.js](https://nodejs.org/en)
-* [Git](https://git-scm.com/)
+  <p>
+    <img src="https://img.shields.io/badge/Status-Conclu%C3%ADdo-brightgreen?style=for-the-badge" alt="Status">
+    <img src="https://img.shields.io/badge/Laravel-11.x-red?style=for-the-badge&logo=laravel" alt="Laravel">
+    <img src="https://img.shields.io/badge/TailwindCSS-3.x-blue?style=for-the-badge&logo=tailwind-css" alt="Tailwind">
+    <img src="https://img.shields.io/badge/MySQL-Database-orange?style=for-the-badge&logo=mysql" alt="MySQL">
+  </p>
 
-## 🛠️ Como Executar o Projeto
+  <h3>👨‍💻 Integrantes do Grupo</h3>
+  <p>
+    Kevin Lima &bull; Lukas Bariani &bull; Sofia Moura &bull; Vinícius Gonzaga
+  </p>
+  
+  <p><em>Trabalho de Conclusão de Curso (TCC) - Técnico em Desenvolvimento de Sistemas</em></p>
 
-1. **Clone o repositório e acesse a pasta:**
-   ```bash
-   git clone https://github.com/seu-usuario/krypta-app.git
-   cd krypta-app
-   composer install
-   npm install
-   DB_CONNECTION=mysql
-   DB_HOST=127.0.0.1
-   DB_PORT=3306
-   DB_DATABASE=krypta_db
-   DB_USERNAME=root
-   DB_PASSWORD=   
-   php artisan key:generate
-   php artisan migrate:fresh --seed  
-   npm run dev
-   php artisan serve
-   Acesse no navegador: http://127.0.0.1:8000
+</div>
 
-Site Funcionando em Localhost (Home Pública)
-https://imagem1.png/
-Legenda: Landing page pública com o design Krypta, exibindo as sessões do TCC.
+---
 
-2. Banco de Dados (Migrations e Seeders)
-https://imagem2.png/
-Legenda: Tabela plans populada com os 10 registros inseridos via Seeder.
+## 📑 Índice
 
-3. Front-End (Operações CRUD)
-https://imagem3.png/
-Legenda: Tela de listagem de planos no Dashboard, acessível apenas para usuários logados.
+- [Visão Geral](#-visão-geral)
+- [Destaques do Projeto](#-destaques-do-projeto)
+- [Stack Tecnológica](#-stack-tecnológica)
+- [Arquitetura](#-arquitetura)
+- [Funcionalidades](#-funcionalidades)
+- [Rotas](#-rotas)
+- [Modelo de Dados](#-modelo-de-dados)
+- [Segurança e Autorização](#-segurança-e-autorização)
+- [Requisitos do TCC Atendidos](#-requisitos-do-tcc-atendidos)
+- [Prints do Projeto](#-prints-do-projeto)
+- [Como Executar o Projeto](#-como-executar-o-projeto)
 
-4. Back-End (Operações CRUD)
-https://imagem4.png/
-Legenda: Código do PlanController.php mostrando os métodos index, store, update e destroy.
+---
 
-Requisitos Atendidos
-Laravel Breeze: Rotas e views de autenticação (Login/Registro) em routes/auth.php e resources/views/auth/.
+## 🔍 Visão Geral
 
-Rota Fallback: Implementada em routes/web.php para tratamento de erros 404.
+O **Krypta** é uma aplicação web (Frontend e Backend) desenvolvida em **Laravel 11**. O projeto foi concebido para ser a vitrine e o sistema de gestão de uma solução inovadora de segurança: um cofre físico e digital para credenciais (senhas e identidade digital).
 
-Migrações: Tabelas criadas via database/migrations/.
+Toda a identidade visual foi construída para transmitir **segurança, tecnologia e modernidade**, utilizando o tema *Dark Mode* (modo escuro) com detalhes em roxo neon, gradientes e elementos de criptografia, baseando-se fielmente no protótipo visual fornecido (PDF 67_krypta).
 
-Tailwind CSS: Utilizado em todas as views do projeto.
+---
 
-Middlewares: Rotas do Dashboard e CRUDs protegidas pelo middleware ['auth', 'verified'] em routes/web.php.
+## ✨ Destaques do Projeto
 
-Seeders: Arquivos PlanSeeder.php (10 registros) e TestimonialSeeder.php em database/seeders/.
+O Krypta possui diferenciais técnicos e funcionais que o destacam como uma aplicação completa:
 
-Página Inicial e Dashboard: Apresentam os dados do TCC em resources/views/welcome.blade.php e dashboard.blade.php.
+- **Interface Imersiva:** Landing page rica em informações, dividida em seções (Trindade Criptográfica, Por que o Krypta existe, Nossos Planos, Depoimentos).
+- **CRUD Duplo Completo:** Sistema de gerenciamento de Planos (Produtos) e Depoimentos (Feedbacks de clientes), provando a escalabilidade do back-end.
+- **Autenticação Customizada:** Telas de Login e Registro totalmente reformuladas para manter a identidade visual escura/roxa, utilizando Laravel Breeze.
+- **Formulário de Contato Integrado:** Página de contato que envia dados diretamente para o banco de dados (tabela `contacts`).
+- **Design Responsivo:** Layout adaptável para celulares, tablets e desktops utilizando as classes utilitárias do Tailwind CSS.
 
-CRUDs: CRUD de Planos (PlanController.php) e CRUD de Depoimentos (TestimonialController.php
+---
+
+## 🛠️ Stack Tecnológica
+
+### Backend
+| Tecnologia | Versão | Uso |
+| :--- | :--- | :--- |
+| PHP | ^8.2 | Linguagem base |
+| Laravel Framework | ^11.0 | Framework principal |
+| Laravel Breeze | ^2.0 | Scaffold de autenticação (Blade) |
+| Eloquent ORM | — | Mapeamento objeto-relacional |
+| MySQL | 8.0+ | Banco de dados relacional |
+
+### Frontend
+| Tecnologia | Versão | Uso |
+| :--- | :--- | :--- |
+| Blade | — | Sistema de templates do Laravel |
+| Tailwind CSS | ^3.4 | Framework CSS utility-first |
+| Vite | ^5.0 | Build tool e dev server |
+| Node.js | 18+ | Gerenciador de pacotes front-end (NPM) |
+
+---
+
+## 🏗️ Arquitetura
+
+O projeto segue rigorosamente o padrão **MVC** (Model-View-Controller) do Laravel:
+
+```text
+krypta-app/
+├── app/
+│   ├── Http/Controllers/       # Controladores (PlanController, PageController, etc.)
+│   └── Models/                 # Entidades (User, Plan, Testimonial, Contact)
+├── database/
+│   ├── migrations/             # Criação das tabelas no banco
+│   └── seeders/                # População inicial do banco (10 planos)
+├── resources/
+│   ├── css/                    # Estilos do Tailwind
+│   ├── js/                     # Scripts (Alpine.js)
+│   └── views/                  # Telas Blade (welcome, dashboard, plans, auth)
+├── routes/
+│   ├── web.php                 # Rotas principais e Middlewares
+│   └── auth.php                # Rotas de login/registro (geradas pelo Breeze)
+└── ...
