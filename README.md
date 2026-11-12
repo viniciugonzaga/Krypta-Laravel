@@ -145,24 +145,16 @@ Seeder (10 registros)	Arquivo database/seeders/PlanSeeder.php. Insere exatamente
 Home e Dashboard com dados	Home em resources/views/welcome.blade.php. Dashboard em resources/views/dashboard.blade.php. Ambos consomem do banco.
 CRUD Completo	Controladores PlanController.php e TestimonialController.php, com views nas pastas resources/views/plans/ e testimonials/.
 📸 Prints do Projeto
-(Certifique-se de que as imagens abaixo estão na raiz do repositório com exatamente estes nomes)
+(As imagens abaixo estão configuradas em HTML para serem exibidas de forma centralizada, sem a necessidade de clicar para abrir).
 
 1. Site Funcionando em Localhost (Home Pública)
-https://imagem1.png/
-Legenda: Landing page com o design dark/roxo do Krypta e listagem de planos.
-
+<p align="center"> <img src="imagem1.png" width="800" alt="Home Pública"> </p> <p align="center"><em>Legenda: Landing page com o design dark/roxo do Krypta e listagem de planos.</em></p>
 2. Banco de Dados (Migrations e Seeders)
-https://imagem2.png/
-Legenda: phpMyAdmin exibindo a tabela plans populada com os 10 registros via Seeder.
-
+<p align="center"> <img src="imagem2.png" width="800" alt="Banco de Dados"> </p> <p align="center"><em>Legenda: phpMyAdmin exibindo a tabela `plans` populada com os 10 registros via Seeder.</em></p>
 3. Front-End (Operações CRUD)
-https://imagem3.png/
-Legenda: Tela de listagem de planos no Dashboard, com botões de Editar e Excluir.
-
+<p align="center"> <img src="imagem3.png" width="800" alt="CRUD Front-End"> </p> <p align="center"><em>Legenda: Tela de listagem de planos no Dashboard, com botões de Editar e Excluir.</em></p>
 4. Back-End (Operações CRUD)
-https://imagem4.png/
-Legenda: Código do PlanController.php mostrando os métodos index, store, update e destroy.
-
+<p align="center"> <img src="imagem4.png" width="800" alt="CRUD Back-End"> </p> <p align="center"><em>Legenda: Código do `PlanController.php` mostrando os métodos index, store, update e destroy.</em></p>
 🚀 Como Executar o Projeto
 Siga os passos abaixo para rodar o projeto localmente na sua máquina.
 
